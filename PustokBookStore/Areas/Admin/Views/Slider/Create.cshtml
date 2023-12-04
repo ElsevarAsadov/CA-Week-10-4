@@ -1,0 +1,39 @@
+﻿@model BookSliderModel
+@{
+    ViewData["Title"] = "Create Book Slider";
+}
+
+<div class="container-fluid p-3">
+    <h1 class="display-1">Create Book Slider</h1>
+
+
+    <form asp-action="Create" asp-controller="Slider" method="POST" enctype="multipart/form-data">
+        
+        <div asp-action="Create" asp-controller="Slider" class="mb-3">
+            <label asp-for="AuthorName" class="form-label"></label>
+            <input asp-for="AuthorName" class="form-control">
+            <span asp-validation-for="AuthorName"></span>
+        </div>
+
+        <div asp-action="Create" asp-controller="Slider" class="mb-3">
+            <label asp-for="BookName" class="form-label"></label>
+            <input asp-for="BookName" class="form-control">
+            <span asp-validation-for="BookName"></span>
+        </div>
+
+        <div asp-action="Create" asp-controller="Slider" class="mb-3">
+            <label asp-for="ButtonText" class="form-label"></label>
+            <input asp-for="ButtonText" class="form-control">
+            <span asp-validation-for="ButtonText"></span>
+        </div>
+
+        <div asp-action="Create" asp-controller="Slider" class="mb-3">
+            <label asp-for="imageFile" class="form-label"></label>
+            <input asp-for="imageFile" class="form-control">
+            <span asp-validation-for="imageFile"></span>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+</div>

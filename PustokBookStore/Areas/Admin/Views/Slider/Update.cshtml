@@ -1,0 +1,38 @@
+﻿@model BookSliderModel
+@{
+    ViewData["Title"] = "Update";
+}
+
+<div class="container-fluid p-3">
+    <h1 class="display-1">Update Book ID: @(Model.Id)</h1>
+
+
+    <form asp-action="Update" asp-controller="Slider" asp-route-id="@Model.Id" method="POST" enctype="multipart/form-data">
+        <div asp-action="Create" asp-controller="Slider" class="mb-3">
+            <label asp-for="AuthorName" class="form-label"></label>
+            <input asp-for="AuthorName" class="form-control">
+            <span asp-validation-for="AuthorName"></span>
+        </div>
+
+        <div asp-action="Create" asp-controller="Slider" class="mb-3">
+            <label asp-for="BookName" class="form-label"></label>
+            <input asp-for="BookName" class="form-control">
+            <span asp-validation-for="BookName"></span>
+        </div>
+
+        <div asp-action="Create" asp-controller="Slider" class="mb-3">
+            <label asp-for="ButtonText" class="form-label"></label>
+            <input asp-for="ButtonText" class="form-control">
+            <span asp-validation-for="ButtonText"></span>
+        </div>
+
+        <div asp-action="Create" asp-controller="Slider" class="mb-3">
+            <label asp-for="imageFile" class="form-label"></label>
+            <input asp-for="imageFile" class="form-control">
+            <span asp-validation-for="imageFile"></span>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+</div>
